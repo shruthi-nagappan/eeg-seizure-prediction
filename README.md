@@ -24,7 +24,19 @@ eeg-seizure-prediction/
 ├── y_train.npy                    # Training labels
 ├── y_test.npy                     # Test labels
 ├── preprocessing_pipeline.pkl     # Saved sklearn preprocessing pipeline
+│
+├── epilepsy_cnn_model.keras       # Saved CNN model
+├── checkpoints/
+│   └── best_model.keras           # Best CNN checkpoint (ModelCheckpoint callback)
+│
 ├── svm_epilepsy_model.pkl         # Saved SVM model
+├── svm_best_params.json           # Best SVM hyperparameters from Bayesian search
+│
+├── svm_convergence.png            # Bayesian optimization convergence plot
+├── svm_confusion_matrix.png       # SVM confusion matrix
+├── svm_roc_curves.png             # SVM ROC curves (One-vs-Rest)
+├── svm_feature_importance.png     # Permutation feature importance
+├── cnn_vs_svm_comparison.png      # Side-by-side model comparison
 │
 └── requirements.txt
 ```
@@ -144,12 +156,18 @@ Download the Bonn dataset and place the folders (`Z`, `O`, `N`, `F`, `S`) inside
 
 ## 📈 Results
 
-| Model | Test Accuracy | AUC (macro) |
-|-------|--------------|-------------|
-| 1D CNN | — | — |
-| Bayesian SVM | — | — |
+| Model | Test Accuracy | Macro AUC | Notes |
+|-------|--------------|-----------|-------|
+| 1D CNN | 95.04% | 0.9901 | Test Loss: 0.2247 |
+| Bayesian SVM | **99.17%** | **0.9983** | Best CV AUC: 0.9964, MCC: 0.9877, Balanced Accuracy: 99.17% |
 
-> Fill in your results after training.
+### Best SVM Hyperparameters (Bayesian Optimization)
+
+| Parameter | Value |
+|-----------|-------|
+| Kernel | RBF |
+| C | 22.417 |
+| gamma | 0.005966 |
 
 ---
 
