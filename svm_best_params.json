@@ -1,0 +1,9 @@
+{
+  "best_cv_auc": 0.9964192708333334,
+  "best_params": {
+    "svm__C": 22.417021598758687,
+    "svm__class_weight": "balanced",
+    "svm__gamma": 0.005965538032072884,
+    "svm__kernel": "rbf"
+  }
+}
