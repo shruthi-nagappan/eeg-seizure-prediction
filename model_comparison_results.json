@@ -1,0 +1,20 @@
+{
+  "1D CNN": {
+    "Accuracy": 0.9504132231404959,
+    "Macro AUC": 0.9900544514704407,
+    "Balanced Accuracy": 0.9500000000000001,
+    "MCC": 0.9268206656919654
+  },
+  "SVM (Bayesian)": {
+    "Accuracy": 0.9917355371900827,
+    "Macro AUC": 0.9982510288065843,
+    "Balanced Accuracy": 0.9916666666666667,
+    "MCC": 0.9877036633471419
+  },
+  "Transformer": {
+    "Accuracy": 0.9525,
+    "Macro AUC": 0.9932568359374999,
+    "Balanced Accuracy": 0.953125,
+    "MCC": 0.9257630618899112
+  }
+}
